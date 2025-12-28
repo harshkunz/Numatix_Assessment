@@ -3,15 +3,15 @@ It is a real-time trading platform built with a microservices architecture. It c
 
 The system is designed for low-latency trading workflows, with services decoupled via Redis pub/sub and state persisted in PostgreSQL. It supports order routing to exchanges (e.g., Binance), real-time position/order/trade updates, and a responsive UI for trading, charting, and portfolio management.
 
+<p align="center">
+  <img src="assets/Screenshot 2025-12-24 180755.png" alt="" height="550">
+</p>
+
 Live Link - https://numatix-assessment.vercel.app/
 <Br/>
 Video Link - https://drive.google.com/drive/folders/1WFKXhTIDk0Kf44pvw7qIek7MwzrxZrFM?usp=sharing
 <Br/>
 Github Repo Link - https://github.com/harshkunz/Numatix_Assessment
-
-<p align="center">
-  <img src="assets/Screenshot 2025-12-24 180755.png" alt="" height="480">
-</p>
 
 ### ☐ Tech Stack Used
 
@@ -40,7 +40,7 @@ Github Repo Link - https://github.com/harshkunz/Numatix_Assessment
 ### ☐ Workflow
 
 <p align="center">
-  <img src="assets/Screenshot 2025-12-24 182706.png" alt="" height="300">
+  <img src="assets/image.png" alt="" height="450">
 </p>
 
 1. **User Authentication**
@@ -52,10 +52,6 @@ Github Repo Link - https://github.com/harshkunz/Numatix_Assessment
    - User submits a trading order through the frontend UI.
    - Frontend sends the order request to the backend API.
    - Backend validates the order, stores it in the database, and publishes the order event to Redis.
-
-<p align="center">
-  <img src="assets/Screenshot 2025-12-24 180405.png" alt="" height="260">
-</p>
 
 3. **Order Execution**
    - Execution service consumes order events from Redis.
@@ -78,16 +74,12 @@ Github Repo Link - https://github.com/harshkunz/Numatix_Assessment
    - Frontend listens for WebSocket events from the event service.
    - UI updates dynamically with new order status, positions, and trade history.
 
-<p align="center">
-  <img src="assets/Screenshot 2025-12-24 180904.png" alt="" height="260">
-</p>
-
 6. **Database Sync**
    - All order and user data is persisted in PostgreSQL via Prisma ORM.
    - Prisma migrations ensure schema changes are tracked and applied.
 
 <p align="center">
-  <img src="assets/Screenshot 2025-12-24 175339.png" alt="" height="400">
+  <img src="assets/Screenshot 2025-12-24 175339.png" alt="" height="550">
 </p>
 
 ### ☐ Project Structure
